@@ -133,3 +133,5 @@ pip-selfcheck.json
 
 *.so
 *.o
+*.c
+*out
