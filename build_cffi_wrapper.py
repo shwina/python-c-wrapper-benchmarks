@@ -12,7 +12,9 @@ ffibuilder.set_source("_libsolve_cffi",
 """
      #include "libsolve/solve.h"   // the C header of the library
 """,
-     libraries=['libsolve/libsolve.so'])   # library name, for the linker
+     library_dirs=['./libsolve'],
+     runtime_library_dirs=['./libsolve'],
+     libraries=['solve'])   # library name, for the linker
 
 if __name__ == "__main__":
     ffibuilder.compile(verbose=True)
